@@ -1,3 +1,12 @@
+:root {
+    /* General colors */
+    --blue-accent: #5F9BF5;
+    --header-bg: #FBFBFB;
+    --posts-bg: #ECECEC;
+    --text-accent: #252525;
+    --alt-text-accent: #f5f5f5;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -20,16 +29,16 @@ body {
 }
 
 .user-header {
-    background-color: red;
+    background-color: var(--header-bg);
     grid-area: header;
 }
 
 .sidebar {
-    background-color: blue;
+    background-color: var(--blue-accent);
     grid-area: sidebar;
 }
 
 .main {
-    background-color: green;
+    background-color: var(--posts-bg);
     grid-area: main;
 }
