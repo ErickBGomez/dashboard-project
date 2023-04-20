@@ -17,6 +17,27 @@ body {
     margin: 0;
 }
 
+/* Google Icon configuration */
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+/* Fill and no fill icon variations */
+
+.material-symbols-outlined.fill {
+    font-variation-settings: 
+    'FILL' 1
+}
+
+.material-symbols-outlined.no-fill {
+    font-variation-settings: 
+    'FILL' 0
+}
+
 .page-container {
     height: 100vh;
 
