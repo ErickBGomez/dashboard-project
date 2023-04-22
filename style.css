@@ -1,10 +1,14 @@
 :root {
     /* General colors */
     --blue-accent: #5F9BF5;
+    --blue-hover-accent: #7db0f7;
     --header-bg: #FBFBFB;
     --posts-bg: #ECECEC;
     --text-accent: #252525;
     --alt-text-accent: #f5f5f5;
+
+    /* Transitions */
+    --hover-element-transition: 100ms;
 
     font-size: 16px;
 }
@@ -90,8 +94,20 @@ a:visited {
     margin: 15px 15px;
 }
 
+.sidebar-head:not(.menu-sidebar-icon) {
+    cursor: default;
+}
+
 .menu-sidebar-icon {
     cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    transition: var(--hover-element-transition);
+}
+
+.menu-sidebar-icon:hover {
+    background-color: var(--blue-hover-accent);
+    transition: var(--hover-element-transition);
 }
 
 .landshare-icon {
@@ -120,11 +136,21 @@ a:visited {
     margin: 22px 0;
 }
 
-.sidebar-elements-groups > .sidebar-element {
+.sidebar-element {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    padding: 10px 17px;
+    border-radius: 10px;
+
     cursor: pointer;
+    transition: var(--hover-element-transition);
+}
+
+.sidebar-element:hover {
+    background-color: var(--blue-hover-accent);
+    transition: var(--hover-element-transition);
 }
 
 .sidebar-element > span {
