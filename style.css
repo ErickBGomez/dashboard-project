@@ -75,8 +75,24 @@ header {
     padding: 20px 50px;
 }
 
-.search-and-user > i {
+.search-and-user {
+    display: flex;
+    gap: 15px;
+
+    align-items: center;
+}
+
+.search-and-user i {
+    cursor: default;
+}
+
+.search-and-user i {
     font-size: 2.2rem;
+}
+
+.search-bar-container {
+    flex: 1;
+    align-self: stretch;
 }
 
 #search-bar {
@@ -88,6 +104,7 @@ header {
     border: none;
     border-radius: 2rem;
     width: 100%;
+    height: 100%;
 }
 
 #search-bar::placeholder {
@@ -100,6 +117,39 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
+}
+
+.notifications {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    background-color: #F95858;
+    color: var(--alt-text-accent);
+    border-radius: 2rem;
+}
+
+.notifications > i,
+.notification-count {
+    cursor: pointer;
+}
+
+.header-user-icon {
+    background-color: var(--blue-accent);
+    width: 50px;
+    height: 50px;
+    border-radius: 2rem;
+    cursor: pointer;
 }
 
 /* Sidebar */
