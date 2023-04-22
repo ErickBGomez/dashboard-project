@@ -83,7 +83,7 @@ h1, h2, h3 {
 }
 
 .menu-sidebar-icon {
-    
+    cursor: pointer;
 }
 
 .landshare-icon {
