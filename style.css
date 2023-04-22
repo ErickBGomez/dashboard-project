@@ -184,6 +184,31 @@ input[type="search"]::-webkit-search-results-decoration {
     font-weight: 400;
 }
 
+button {
+    font-size: 1rem;
+    border: 2px solid var(--blue-accent);
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button.primary {
+    background-color: var(--blue-accent);
+    color: var(--alt-text-accent);
+    font-weight: 800;
+}
+
+button.primary > .add-icon {
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+button.secondary {
+    background-color: var(--header-bg);
+    color: var(--blue-accent);
+    font-weight: 600;
+}
+
 /* Sidebar */
 
 .sidebar {
