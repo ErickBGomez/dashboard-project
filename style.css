@@ -160,7 +160,6 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-top: 30px;
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
 .welcome-user-icon {
@@ -168,9 +167,11 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 80px;
     height: 80px;
     border-radius: 3rem;
+    margin-right: 30px;
 }
 
 .nickname-container {
+    flex: 1;
     line-height: 1.3rem;
 }
 
@@ -196,6 +197,7 @@ button.primary {
     background-color: var(--blue-accent);
     color: var(--alt-text-accent);
     font-weight: 800;
+    margin-left: 15px;
 }
 
 button.primary > .add-icon {
