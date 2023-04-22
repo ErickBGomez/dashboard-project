@@ -29,9 +29,9 @@ h1, h2, h3 {
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
-    'wght' 500,
+    'wght' 400,
     'GRAD' 0,
-    'opsz' 24
+    'opsz' 48
 }
 
 /* Fill icon variations */
@@ -39,10 +39,6 @@ h1, h2, h3 {
 .material-symbols-outlined.fill {
     font-variation-settings: 
     'FILL' 1
-}
-
-.material-symbols-outlined.size-48 {
-    font-size: 36px;
 }
 
 .material-symbols-outlined.size-36 {
@@ -73,26 +69,36 @@ h1, h2, h3 {
     background-color: var(--blue-accent);
     grid-area: sidebar;
 
-    padding: 20px 30px;
+    padding: 15px 15px;
     color: var(--alt-text-accent);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-head {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .menu-sidebar-icon {
+    
+}
+
+.landshare-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
 }
 
 .sidebar-title h2 {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .sidebar-title h1 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.7rem;
 }
 
