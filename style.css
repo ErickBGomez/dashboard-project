@@ -64,12 +64,35 @@ a:visited {
 
 /* Header */
 
+header,
+main {
+    color: var(--text-accent);
+}
+
 header {
     background-color: var(--header-bg);
     grid-area: header;
+    padding: 20px 50px;
 }
 
+.search-and-user > i {
+    font-size: 2.2rem;
+}
 
+#search-bar {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: var(--text-accent);
+    background-color: #dddddd;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+}
+
+#search-bar::placeholder {
+    color: #9e9e9e;
+}
 
 /* Sidebar */
 
@@ -175,7 +198,7 @@ footer {
 
 /* Main */
 
-.main {
+main {
     background-color: var(--posts-bg);
     grid-area: main;
 }
