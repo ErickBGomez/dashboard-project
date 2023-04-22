@@ -26,7 +26,7 @@ body {
     margin: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
@@ -154,6 +154,34 @@ input[type="search"]::-webkit-search-results-decoration {
     height: 50px;
     border-radius: 2rem;
     cursor: pointer;
+}
+
+.welcome-and-post {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.welcome-user-icon {
+    background-color: var(--blue-accent);
+    width: 80px;
+    height: 80px;
+    border-radius: 3rem;
+}
+
+.nickname-container {
+    line-height: 1.3rem;
+}
+
+.greeting {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.name-and-nickname {
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 /* Sidebar */
