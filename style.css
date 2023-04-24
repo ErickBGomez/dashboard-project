@@ -323,8 +323,6 @@ main {
 
     padding: 15px 30px;
     gap: 25px;
-
-    height: 100%;
 }
 
 main h1 {
@@ -335,7 +333,8 @@ main h1 {
 
 .post,
 .analytics,
-.trending {
+.trending,
+.people {
     background-color: var(--primary-bg);
     padding: 12px;
     border-radius: 10px;
@@ -428,4 +427,18 @@ main h1 {
 
 .trending-container {
     grid-area: 2 / 2 / 3 / 3;
+}
+
+.see-more {
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #dfdfdf;
+    font-weight: 400;
+    color: var(--blue-accent);
+}
+
+.see-more > span {
+    cursor: pointer;
 }
