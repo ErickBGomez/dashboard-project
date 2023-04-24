@@ -371,13 +371,18 @@ main h1 {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-top: 7px;
 }
 
 .pin-post {
     flex: 1;
 }
 
-
+.post-actions > button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    margin-left: 5px;
+}
 
 .analytics-container {
 
