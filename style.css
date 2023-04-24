@@ -429,6 +429,8 @@ main h1 {
     grid-area: 2 / 2 / 3 / 3;
 }
 
+.trending
+
 .trending-element {
     display: flex;
     align-items: center;
