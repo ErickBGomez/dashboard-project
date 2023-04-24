@@ -331,6 +331,15 @@ main h1 {
     margin-bottom: 10px;
 }
 
+.post,
+.analytics,
+.trending {
+    background-color: var(--primary-bg);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px #7979793f;
+}
+
 .posts-container {
     grid-area: 1 / 1 / 3 / 2;
 }
@@ -346,10 +355,6 @@ main h1 {
     display: flex;
     flex-direction: column;
     gap: 5px;
-
-    background-color: var(--primary-bg);
-    padding: 12px;
-    border-radius: 10px;
 }
 
 .post-image {
@@ -380,13 +385,34 @@ main h1 {
 }
 
 .post-actions > button {
+    border-radius: 5px;
     font-size: 0.9rem;
     padding: 6px 10px;
     margin-left: 5px;
 }
 
-.analytics-container {
+.analytics > h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
 
+.graph {
+    padding: 0 20px;
+    display: grid;
+    grid-template-rows: 100px min-content;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 5px 20px;
+    text-align: center;
+}
+
+.graph-bar {
+    background-color: var(--blue-accent);
+}
+
+.graph-day {
+    font-weight: 500;
 }
 
 .trending-container {
