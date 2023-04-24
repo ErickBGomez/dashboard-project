@@ -9,6 +9,7 @@
     --search-input-bg: #dddddd;
     --search-input-placeholder-accent: #9e9e9e; 
     --notification-counter-bubble: #F95858;
+    --divider: 1px solid #dfdfdf;
 
     /* Transitions */
     --hover-element-transition: 100ms;
@@ -429,12 +430,21 @@ main h1 {
     grid-area: 2 / 2 / 3 / 3;
 }
 
-.trending
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .trending-element {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.trending-element:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: var(--divider);
 }
 
 i.trending-icon {
@@ -461,7 +471,7 @@ i.trending-icon {
     padding-top: 10px;
     width: 100%;
     text-align: center;
-    border-top: 1px solid #dfdfdf;
+    border-top: var(--divider);
     font-weight: 400;
     color: var(--blue-accent);
 }
