@@ -429,6 +429,31 @@ main h1 {
     grid-area: 2 / 2 / 3 / 3;
 }
 
+.trending-element {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+i.trending-icon {
+    font-size: 2.3rem;
+}
+
+.trending-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.trending-icon,
+.trending-text {
+    color: var(--blue-accent);
+}
+
+.trending-count {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
 .see-more {
     margin-top: 10px;
     padding-top: 10px;
