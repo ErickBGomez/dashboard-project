@@ -315,6 +315,21 @@ footer {
 
 /* Sidebar view states */
 
+.sidebar[data-viewState="expand"] .sidebar-title,
+.sidebar[data-viewState="expand"] .sidebar-element span,
+.sidebar[data-viewState="expand"] footer span {
+    display: inline-block;
+}
+
+.sidebar[data-viewState="expand"] .landshare-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar[data-viewState="expand"] footer a {
+    font-size: 0.9rem;
+}
+
 .sidebar[data-viewState="shrink"] .sidebar-title,
 .sidebar[data-viewState="shrink"] .sidebar-element span,
 .sidebar[data-viewState="shrink"] footer span {
