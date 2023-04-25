@@ -318,7 +318,7 @@ footer {
 .sidebar[data-viewState="expand"] .sidebar-title,
 .sidebar[data-viewState="expand"] .sidebar-element span,
 .sidebar[data-viewState="expand"] footer span {
-    display: inline-block;
+    transition: 200ms;
 }
 
 .sidebar[data-viewState="expand"] .landshare-icon {
@@ -333,7 +333,8 @@ footer {
 .sidebar[data-viewState="shrink"] .sidebar-title,
 .sidebar[data-viewState="shrink"] .sidebar-element span,
 .sidebar[data-viewState="shrink"] footer span {
-    display: none;
+    font-size: 0rem;
+    transition: 200ms;
 }
 
 .sidebar[data-viewState="shrink"] .landshare-icon {
