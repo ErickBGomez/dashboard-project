@@ -313,6 +313,23 @@ footer {
     align-self: stretch;
 }
 
+/* Sidebar view states */
+
+.sidebar[data-viewState="shrink"] .sidebar-title,
+.sidebar[data-viewState="shrink"] .sidebar-element span,
+.sidebar[data-viewState="shrink"] footer span {
+    display: none;
+}
+
+.sidebar[data-viewState="shrink"] .landshare-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.sidebar[data-viewState="shrink"] footer a {
+    font-size: 0.8rem;
+}
+
 /* Main */
 
 main {
