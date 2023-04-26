@@ -224,6 +224,9 @@ button.secondary {
     align-items: center;
 
     position: relative;
+
+    width: 105px;
+    transition: var(--sidebar-slide-transition);
 }
 
 .sidebar-head {
@@ -252,8 +255,8 @@ i.menu-sidebar-icon {
 }
 
 .landshare-icon {
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
     background-color: #fff;
 }
 
@@ -316,12 +319,11 @@ footer {
     align-self: stretch;
 }
 
-/* Sidebar view states */
-
-.sidebar {
-    width: 105px;
-    transition: var(--sidebar-slide-transition);
+footer a {
+    font-size: 0.7rem;
 }
+
+/* Sidebar view states */
 
 .sidebar .sidebar-title,
 .sidebar .sidebar-element > span,
@@ -331,15 +333,6 @@ footer {
     z-index: -1;
 
     transition: var(--sidebar-slide-transition);
-}
-
-.sidebar .landshare-icon {
-    width: 35px;
-    height: 35px;
-}
-
-.sidebar footer a {
-    font-size: 0.8rem;
 }
 
 .sidebar.active {
@@ -367,6 +360,8 @@ footer {
 
 .sidebar.active footer a {
     font-size: 0.9rem;
+
+    transition: var(--sidebar-slide-transition);
 }
 
 /* Main */
