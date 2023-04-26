@@ -13,6 +13,7 @@
 
     /* Transitions */
     --hover-element-transition: 100ms;
+    --sidebar-slide-transition: 300ms;
 
     font-size: 16px;
 }
@@ -317,21 +318,55 @@ footer {
 
 /* Sidebar view states */
 
-.sidebar-title {
-    position: absolute;
-
+.sidebar {
+    width: 105px;
+    transition: var(--sidebar-slide-transition);
 }
 
-.sidebar .sidebar-title {
+.sidebar .sidebar-title,
+.sidebar .sidebar-element > span,
+.sidebar footer span {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    transition: var(--sidebar-slide-transition);
+}
+
+.sidebar .landshare-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.sidebar footer a {
+    font-size: 0.8rem;
+}
+
+.sidebar.active {
+    width: 300px;
+    transition: var(--sidebar-slide-transition);
+}
+
+.sidebar.active .sidebar-title,
+.sidebar.active .sidebar-element > span,
+.sidebar.active footer span {
     position: relative;
     left: 0;
-    transition: 200ms;
+    opacity: 1;
+    z-index: 1;
+
+    transition: var(--sidebar-slide-transition);
 }
 
-.sidebar.active .sidebar-title {
-    position: absolute;
-    left: -20px;
-    transition: 200ms ease-out;
+.sidebar.active .landshare-icon {
+    width: 55px;
+    height: 55px;
+
+    transition: var(--sidebar-slide-transition);
+}
+
+.sidebar.active footer a {
+    font-size: 0.9rem;
 }
 
 /* Main */
