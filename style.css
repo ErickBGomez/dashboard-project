@@ -88,11 +88,11 @@ header {
 }
 
 .search-and-user i {
-    cursor: default;
+    font-size: 2.2rem;
 }
 
-.search-and-user i {
-    font-size: 2.2rem;
+.search-icon {
+    cursor: default;
 }
 
 .search-bar-container {
@@ -122,6 +122,10 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
+}
+
+.apps {
+    cursor: pointer;
 }
 
 .notifications {
