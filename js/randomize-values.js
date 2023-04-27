@@ -51,3 +51,11 @@ randomizeGraphBarValues();
 
 // Notification count (between 0 to 9, and then 9+ if number is grater than 9)
 randomizeNotificationCount();
+
+let jsonB;
+
+fetch("js/names-lastnames.json")
+.then(response => response.json())
+.then(data => jsonB = data);
+
+console.log(jsonB);
