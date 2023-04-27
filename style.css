@@ -452,6 +452,10 @@ main h1 {
     flex: 1;
 }
 
+.view-count {
+    font-weight: 400;
+}
+
 .post-actions > button {
     border-radius: 5px;
     font-size: 0.9rem;
@@ -500,7 +504,7 @@ main h1 {
 }
 
 .graph-day {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .trending-elements {
