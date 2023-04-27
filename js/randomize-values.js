@@ -2,6 +2,7 @@ const viewCounts = document.querySelectorAll(".view-count");
 const trendingPostsCounts = document.querySelectorAll(".trending-posts-count");
 const graphValuesElements = document.querySelectorAll(".graph-bar-value");
 const graphBars = document.querySelectorAll(".graph-bar");
+const notificationCount = document.querySelector(".notification-count");
 
 // Array to save graph values
 const graphValuesArray = [7];
@@ -22,6 +23,18 @@ function randomizeGraphBarValues() {
     }
 }
 
+function randomizeNotificationCount() {
+    let newNotificationValue = getRandomNumberRange(0, 12).toString();
+
+    if (newNotificationValue == 0) {
+        notificationCount.style.visibility = "hidden";
+    } else if (newNotificationValue > 9) {
+        newNotificationValue = "9+";
+    }
+    
+    notificationCount.innerText = newNotificationValue;
+}
+
 // Randomize view count to posts elements
 viewCounts.forEach(viewCount => {
     viewCount.innerText = getRandomNumberRange(1, 999) + "K";
@@ -35,3 +48,6 @@ trendingPostsCounts.forEach(postCount => {
 
 // Randomize graph bar values
 randomizeGraphBarValues();
+
+// Notification count (between 0 to 9, and then 9+ if number is grater than 9)
+randomizeNotificationCount();
