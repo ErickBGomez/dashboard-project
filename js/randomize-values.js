@@ -52,9 +52,16 @@ randomizeGraphBarValues();
 // Notification count (between 0 to 9, and then 9+ if number is grater than 9)
 randomizeNotificationCount();
 
-async function randomizeTextFromJSON(jsonFile) {
-    const url = "json/" + jsonFile;
+const name = document.querySelector(".name");
+
+async function randomizeTextFromJSON(element, jsonFile) {
+    const url = `json/${jsonFile}.json`;
 
     const response = await fetch(url);
     const data = await response.json();
+
+    const randomIndex = getRandomNumberRange(0, data.length - 1);
+    element.innerText = data[randomIndex];
 }
+
+randomizeTextFromJSON(name, "names");
