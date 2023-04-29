@@ -57,6 +57,10 @@ async function setRandomStringFromJSON(element, jsonFileName) {
     element.innerText = data[randomIndex];
 }
 
+function setNickname() {
+    console.log("test")
+}
+
 // Invoking functions:
 // Random numbers
 setRandomGraphBarValues();
@@ -66,4 +70,5 @@ setRandomValuesToArray(trendingPostsCounts, 1, 999, "K");
 
 // Random strings
 setRandomStringFromJSON(nameElement, "names");
-setRandomStringFromJSON(surnameElement, "surnames");
+setRandomStringFromJSON(surnameElement, "surnames")
+.then(setNickname);
