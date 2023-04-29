@@ -9,6 +9,7 @@ const notificationCount = document.querySelector(".notification-count");
 const nameElement = document.querySelector(".name");
 const surnameElement = document.querySelector(".surname");
 const nicknameElement = document.querySelector(".nickname");
+const trendingHashtags = document.querySelectorAll(".trending-text");
 
 // Random number between two values (both inclusive)
 function getRandomNumberRange(minValue, maxValue) {
@@ -66,6 +67,12 @@ function setNickname() {
     nicknameElement.innerText = parsedNickname;
 }
 
+function setTrendingHashtags() {
+    trendingHashtags.forEach(hashtag => {
+        setRandomStringFromJSON(hashtag, "hashtags");
+    });
+}
+
 // Invoking functions:
 // Random numbers
 setRandomGraphBarValues();
@@ -77,3 +84,4 @@ setRandomValuesToArray(trendingPostsCounts, 1, 999, "K");
 setRandomStringFromJSON(nameElement, "names");
 setRandomStringFromJSON(surnameElement, "surnames")
 .then(setNickname);
+setTrendingHashtags();
