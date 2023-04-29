@@ -9,9 +9,6 @@ const notificationCount = document.querySelector(".notification-count");
 const nameElement = document.querySelector(".name");
 const surnameElement = document.querySelector(".surname");
 
-// Array to save graph values
-const graphValuesArray = [7];
-
 // Random number between two values (both inclusive)
 function getRandomNumberRange(minValue, maxValue) {
     minValue = Math.ceil(minValue);
@@ -20,8 +17,11 @@ function getRandomNumberRange(minValue, maxValue) {
 }
 
 function setRandomGraphBarValues() {
-    for(let i = 0; i < 7; i++) {
-        graphValuesArray[i] = getRandomNumberRange(0, 100);
+    // Array to save graph values
+    const graphValuesArray = [];
+
+    for(let i = 0; i < graphBars.length; i++) {
+        graphValuesArray.push(getRandomNumberRange(0, 100));
     
         graphValuesElements[i].innerText = graphValuesArray[i];
         graphBars[i].style.height = `${graphValuesArray[i]}%`;
