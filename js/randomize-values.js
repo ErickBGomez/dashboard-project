@@ -1,8 +1,13 @@
+// Target for random numbers
 const viewCounts = document.querySelectorAll(".view-count");
 const trendingPostsCounts = document.querySelectorAll(".trending-posts-count");
 const graphValuesElements = document.querySelectorAll(".graph-bar-value");
 const graphBars = document.querySelectorAll(".graph-bar");
 const notificationCount = document.querySelector(".notification-count");
+
+// Target for random strings from JSON files
+const nameElement = document.querySelector(".name");
+const surnameElement = document.querySelector(".surname");
 
 // Array to save graph values
 const graphValuesArray = [7];
@@ -45,15 +50,7 @@ trendingPostsCounts.forEach(postCount => {
     postCount.innerText = getRandomNumberRange(1, 999) + "K";
 });
 
-
-// Randomize graph bar values
-randomizeGraphBarValues();
-
-// Notification count (between 0 to 9, and then 9+ if number is grater than 9)
-randomizeNotificationCount();
-
-const nameElement = document.querySelector(".name");
-
+// Get JSON file and apply to the specified element
 async function randomizeTextFromJSON(element, jsonFileName) {
     const url = `json/${jsonFileName}.json`;
 
@@ -64,4 +61,11 @@ async function randomizeTextFromJSON(element, jsonFileName) {
     element.innerText = data[randomIndex];
 }
 
+// Invoking functions:
+// Random numbers
+randomizeGraphBarValues();
+randomizeNotificationCount();
+
+// Random strings
 randomizeTextFromJSON(nameElement, "names");
+randomizeTextFromJSON(surnameElement, "surnames");
