@@ -8,6 +8,7 @@ const notificationCount = document.querySelector(".notification-count");
 // Target for random strings from JSON files
 const nameElement = document.querySelector(".name");
 const surnameElement = document.querySelector(".surname");
+const nicknameElement = document.querySelector(".nickname");
 
 // Random number between two values (both inclusive)
 function getRandomNumberRange(minValue, maxValue) {
@@ -58,7 +59,11 @@ async function setRandomStringFromJSON(element, jsonFileName) {
 }
 
 function setNickname() {
-    console.log("test")
+    const initialNickname = nameElement.innerText.toLowerCase() + surnameElement.innerText.toLowerCase();
+    // Remove accents: https://ricardometring.com/javascript-replace-special-characters
+    const parsedNickname = initialNickname.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    
+    nicknameElement.innerText = parsedNickname;
 }
 
 // Invoking functions:
