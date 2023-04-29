@@ -388,8 +388,8 @@ main {
     grid-template-columns: 1fr min-content;
     grid-template-rows: min-content;
 
-    padding: 15px 30px;
-    gap: 25px;
+    padding: 20px 35px;
+    gap: 30px;
 }
 
 main h1 {
