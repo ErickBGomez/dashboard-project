@@ -19,7 +19,7 @@ function getRandomNumberRange(minValue, maxValue) {
     return Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
 }
 
-function randomizeGraphBarValues() {
+function setRandomGraphBarValues() {
     for(let i = 0; i < 7; i++) {
         graphValuesArray[i] = getRandomNumberRange(0, 100);
     
@@ -28,7 +28,7 @@ function randomizeGraphBarValues() {
     }
 }
 
-function randomizeNotificationCount() {
+function setRandomNotificationCount() {
     let newNotificationValue = getRandomNumberRange(0, 12).toString();
 
     if (newNotificationValue == 0) {
@@ -40,18 +40,14 @@ function randomizeNotificationCount() {
     notificationCount.innerText = newNotificationValue;
 }
 
-// Randomize view count to posts elements
-viewCounts.forEach(viewCount => {
-    viewCount.innerText = getRandomNumberRange(1, 999) + "K";
-});
-
-// Randomize trending posts counts
-trendingPostsCounts.forEach(postCount => {
-    postCount.innerText = getRandomNumberRange(1, 999) + "K";
-});
+function setRandomValuesToArray(array, minValue, maxValue, prefixString = "") {
+    array.forEach(element => {
+        element.innerText = getRandomNumberRange(minValue, maxValue) + prefixString;
+    });
+}
 
 // Get JSON file and apply to the specified element
-async function randomizeTextFromJSON(element, jsonFileName) {
+async function setRandomStringFromJSON(element, jsonFileName) {
     const url = `json/${jsonFileName}.json`;
 
     const response = await fetch(url);
@@ -63,9 +59,11 @@ async function randomizeTextFromJSON(element, jsonFileName) {
 
 // Invoking functions:
 // Random numbers
-randomizeGraphBarValues();
-randomizeNotificationCount();
+setRandomGraphBarValues();
+setRandomNotificationCount();
+setRandomValuesToArray(viewCounts, 1, 999, "K");
+setRandomValuesToArray(trendingPostsCounts, 1, 999, "K");
 
 // Random strings
-randomizeTextFromJSON(nameElement, "names");
-randomizeTextFromJSON(surnameElement, "surnames");
+setRandomStringFromJSON(nameElement, "names");
+setRandomStringFromJSON(surnameElement, "surnames");
