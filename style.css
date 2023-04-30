@@ -1,11 +1,11 @@
 :root {
     /* General colors */
-    --primary-bg: #FBFBFB;
-    --secondary-bg: #ECECEC;
+    --primary-bg: #fcfcfc;
+    --secondary-bg: #f2f2f2;
     --blue-accent: #5F9BF5;
     --blue-hover-accent: #7db0f7;
     --blue-active-accent: #498df3;
-    --secondary-hover-accent: #f2f2f2;
+    --secondary-hover-accent: #f0f0f0;
     --secondary-active-accent: #e3e3e3;
     --text-accent: #252525;
     --alt-text-accent: #f5f5f5;
@@ -13,7 +13,9 @@
     --search-input-placeholder-accent: #9e9e9e; 
     --notification-counter-bubble: #F95858;
     --divider: 1px solid #dfdfdf;
-    
+    --containers-shadow: 0 0 15px 1px #66666644;
+    --header-shadow: 0 0 20px 1px #9e9e9e50;
+
     /* Transitions */
     --hover-active-transition: 100ms;
     --hover-active-button-transition: 50ms;
@@ -82,6 +84,7 @@ main {
 header {
     background-color: var(--primary-bg);
     padding: 20px 50px;
+    box-shadow: var(--header-shadow);
 }
 
 .search-and-user {
@@ -422,6 +425,7 @@ footer a {
 /* Main */
 
 main {
+    z-index: -1;
     background-color: var(--secondary-bg);
     
     display: grid;
@@ -443,7 +447,7 @@ main h1 {
 .trending {
     background-color: var(--primary-bg);
     border-radius: 10px;
-    box-shadow: 0 0 15px 1px #7979793f;
+    box-shadow: var(--containers-shadow);
 }
 
 .analytics > *,
