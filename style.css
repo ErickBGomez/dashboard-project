@@ -15,7 +15,7 @@
     --divider: 1px solid #dfdfdf;
     
     /* Transitions */
-    --hover-sidebar-element-transition: 100ms;
+    --hover-active-transition: 100ms;
     --hover-active-button-transition: 50ms;
     --sidebar-slide-transition: 300ms;
 
@@ -294,12 +294,12 @@ i.menu-sidebar-icon {
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: var(--hover-sidebar-element-transition);
+    transition: var(--hover-active-transition);
 }
 
 .menu-sidebar-icon:hover {
     background-color: var(--blue-hover-accent);
-    transition: var(--hover-sidebar-element-transition);
+    transition: var(--hover-active-transition);
 }
 
 .landshare-icon {
@@ -337,12 +337,12 @@ i.menu-sidebar-icon {
     border-radius: 10px;
 
     cursor: pointer;
-    transition: var(--hover-sidebar-element-transition);
+    transition: var(--hover-active-transition);
 }
 
 .sidebar-element:hover {
     background-color: var(--blue-hover-accent);
-    transition: var(--hover-sidebar-element-transition);
+    transition: var(--hover-active-transition);
 }
 
 .sidebar-element > span {
@@ -440,12 +440,15 @@ main h1 {
 
 .post,
 .analytics,
-.trending,
-.people {
+.trending {
     background-color: var(--primary-bg);
-    padding: 12px;
     border-radius: 10px;
     box-shadow: 0 0 15px 1px #7979793f;
+}
+
+.analytics > *,
+.trending-elements > * {
+    padding: 12px;
 }
 
 .posts-container {
@@ -463,8 +466,20 @@ main h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 12px;
 
     cursor: pointer;
+    transition: var(--hover-active-transition);
+}
+
+.post:hover {
+    background-color: var(--secondary-hover-accent);
+    transition: var(--hover-active-transition);
+}
+
+.post:active {
+    background-color: var(--secondary-active-accent);
+    transition:var(--hover-active-transition);
 }
 
 .post-image {
@@ -521,11 +536,11 @@ main h1 {
 .analytics > h2 {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 10px;
 }
 
 .graph {
     padding: 0 17px;
+    margin-bottom: 12px;
     display: grid;
     grid-template-rows: 130px min-content;
     grid-auto-flow: column;
@@ -557,7 +572,6 @@ main h1 {
 .trending-elements {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .trending-element {
@@ -576,7 +590,7 @@ i.trending-icon {
 }
 
 .trending-text {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -586,13 +600,12 @@ i.trending-icon {
 }
 
 .trending-count {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 300;
 }
 
 .see-more {
-    margin-top: 10px;
-    padding-top: 10px;
+    padding: 12px;
     width: 100%;
     text-align: center;
     border-top: var(--divider);
@@ -600,6 +613,30 @@ i.trending-icon {
     color: var(--blue-accent);
 }
 
-.see-more > span {
+.trending-element,
+.see-more {
+    user-select: none;
     cursor: pointer;
+    transition: var(--hover-active-transition);
+}
+
+
+.trending-element:hover,
+.see-more:hover {
+    background-color: var(--secondary-hover-accent);
+    transition: var(--hover-active-transition);
+}
+
+.trending-element:first-child:hover {
+    border-radius: 10px 10px 0 0;
+}
+
+.see-more:hover {
+    border-radius: 0 0 10px 10px;
+}
+
+.trending-element:active,
+.see-more:active {
+    background-color: var(--secondary-active-accent);
+    transition: var(--hover-active-transition);
 }
