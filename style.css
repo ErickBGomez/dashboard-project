@@ -4,7 +4,7 @@
     --secondary-bg: #f2f2f2;
     --blue-accent: #5F9BF5;
     --blue-hover-accent: #7db0f7;
-    --blue-active-accent: #498df3;
+    --blue-active-accent: #9ec4fa;
     --secondary-hover-accent: #f0f0f0;
     --secondary-active-accent: #e3e3e3;
     --text-accent: #252525;
@@ -57,6 +57,10 @@ a:visited {
     'wght' 500,
     'GRAD' 0,
     'opsz' 48
+}
+
+i {
+    user-select: none;
 }
 
 /* Fill icon variations */
@@ -338,11 +342,17 @@ i.menu-sidebar-icon {
     border-radius: 10px;
 
     cursor: pointer;
+    user-select: none;
     transition: var(--hover-active-transition);
 }
 
 .sidebar-element:hover {
     background-color: var(--blue-hover-accent);
+    transition: var(--hover-active-transition);
+}
+
+.sidebar-element:active {
+    background-color: var(--blue-active-accent);
     transition: var(--hover-active-transition);
 }
 
