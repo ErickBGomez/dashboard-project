@@ -106,7 +106,7 @@ header {
     font-size: 2.2rem;
 }
 
-.search-icon {
+#search-icon {
     cursor: default;
     margin-right: 10px;
 }
@@ -162,23 +162,23 @@ input[type="search"]::-webkit-search-results-decoration {
     border-radius: 2rem;
 }
 
-header i:not(.search-icon) {
+header i:not(#search-icon) {
     padding: 7px;
     border-radius: 10px;
     transition: var(--hover-active-transition);
 }
 
-header i:not(.search-icon):hover {
+header i:not(#search-icon):hover {
     background-color: var(--secondary-hover-accent);
     transition: var(--hover-active-transition);
 }
 
-header i:not(.search-icon):active {
+header i:not(#search-icon):active {
     background-color: var(--secondary-active-accent);
     transition: var(--hover-active-transition);
 }
 
-header i:not(.search-icon),
+header i:not(#search-icon),
 .notification-count {
     cursor: pointer;
 }
