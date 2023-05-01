@@ -347,7 +347,10 @@ i.menu-sidebar-icon {
 .landshare-icon {
     width: 35px;
     height: 35px;
-    background-color: #fff;
+}
+
+.landshare-icon path {
+    stroke: var(--alt-text-accent);
 }
 
 .sidebar-title h2 {
