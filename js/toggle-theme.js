@@ -1,6 +1,6 @@
 const root = document.documentElement;
 const themeIcon = document.querySelector("#theme");
-let currentTheme = "dark";
+let currentTheme = "light";
 
 function setTheme(newTheme) {
     root.className = newTheme;
