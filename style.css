@@ -31,6 +31,20 @@
 
 :root.dark {
     /* Dark theme colors */
+    --primary-bg: #333333;
+    --secondary-bg: #292929;
+    --blue-accent: #669ff5;
+    --blue-hover-accent: #82b3f7;
+    --blue-active-accent: #9ec4fa;
+    --secondary-hover-accent: #3d3d3d;
+    --secondary-active-accent: #525252;
+    --text-accent: #e2e2e2;
+    --alt-text-accent: #f7f7f7;
+    --search-input-bg: #404040;
+    --search-input-placeholder-accent: #808080; 
+    --notification-counter-bubble: #f96666;
+    --divider: 1px solid #454545;
+    --containers-shadow: 0 0 15px 1px #1414144f;
 }
 
 *, *::before, *::after {
