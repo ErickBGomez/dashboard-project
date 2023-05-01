@@ -21,6 +21,7 @@
     --secondary-hover-accent: #f0f0f0;
     --secondary-active-accent: #e3e3e3;
     --text-accent: #202020;
+    --sidebar-text-accent: #f5f5f5;
     --alt-text-accent: #f5f5f5;
     --search-input-bg: #e7e7e7;
     --search-input-placeholder-accent: #9e9e9e; 
@@ -33,13 +34,14 @@
     /* Dark theme colors */
     --primary-bg: #333333;
     --secondary-bg: #292929;
-    --blue-accent: #669ff5;
+    --blue-accent: #5F9BF5;
     --blue-hover-accent: #82b3f7;
     --blue-active-accent: #9ec4fa;
     --secondary-hover-accent: #3d3d3d;
     --secondary-active-accent: #525252;
     --text-accent: #e2e2e2;
-    --alt-text-accent: #f7f7f7;
+    --sidebar-text-accent: #f7f7f7;
+    --alt-text-accent: #202020;
     --search-input-bg: #404040;
     --search-input-placeholder-accent: #808080; 
     --notification-counter-bubble: #f96666;
@@ -52,7 +54,7 @@
 }
 
 ::selection {
-    color: var(--alt-text-accent);
+    color: var(--sidebar-text-accent);
     background-color: var(--blue-accent);
 }
 
@@ -177,7 +179,7 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 0.75rem;
     font-weight: 500;
     background-color: var(--notification-counter-bubble);
-    color: var(--alt-text-accent);
+    color: var(--sidebar-text-accent);
     border-radius: 2rem;
 }
 
@@ -264,7 +266,7 @@ button:active {
 
 button.primary {
     background-color: var(--blue-accent);
-    color: var(--alt-text-accent);
+    color: var(--sidebar-text-accent);
     font-weight: 800;
 }
 
@@ -312,7 +314,7 @@ button.secondary:active {
 .sidebar {
     background-color: var(--blue-accent);
     grid-area: 1 / 1 / 3 / 2;
-    color: var(--alt-text-accent);
+    color: var(--sidebar-text-accent);
 
     display: flex;
     flex-direction: column;
@@ -355,7 +357,7 @@ i.menu-sidebar-icon {
 }
 
 .landshare-icon path {
-    stroke: var(--alt-text-accent);
+    stroke: var(--sidebar-text-accent);
 }
 
 .sidebar-title {
@@ -421,10 +423,14 @@ i.menu-sidebar-icon {
 
 footer {
     font-size: 0.9rem;
-    background-color: #272727;
+    background-color: var(--text-accent);
     padding: 7px 0;
     text-align: center;
     align-self: stretch;
+}
+
+footer span {
+    color: var(--alt-text-accent);
 }
 
 footer a {
